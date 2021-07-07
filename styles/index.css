@@ -41,17 +41,15 @@ body {
 }
 #nav-bar a.nav-link {
   font-size: 1.2rem;
-  padding: 0 15px 0 15px;
-  margin: 5px;
   color: #eceff7;
   border: 1px solid white;
   font-weight: bold;
   background: #ea4949;
-  border-radius: 0 0 6px 0;
+  padding: 0.3rem;
+  margin: 0 5px 0 5px;
 }
 #form-group {
   display: flex;
-  margin: auto;
   width: 50vw;
   align-items: center;
   flex-direction: column;
@@ -60,28 +58,28 @@ body {
 }
 h1#news-description {
   color: rgb(255, 255, 255);
-  padding: 15px 0;
 }
 button#subscribe-button {
   background: rgba(2, 0, 112, 0.9);
   color: white;
   width: 30%;
-  margin-top: 1rem;
   height: auto;
-  padding: 15px;
   border-radius: 1rem 0 1rem 1rem;
+}
+button#subscribe-button:hover {
+  font-weight: bold;
+  font-size: 0.9rem;
+  background: rgba(16, 14, 163, 0.9);
 }
 #email-input {
   height: 2.5rem;
   font-size: 1.1rem;
   width: 80%;
-  padding: 15px 0;
-  border-radius: 0 0 1rem 0;
+  border-radius: 0.5rem;
 }
 #content {
   width: 50vw;
   border: 1px solid red;
-  margin: auto;
   margin-top: 2rem;
 }
 .harmonica {
@@ -99,7 +97,6 @@ button#subscribe-button {
 .harmonica > h1 {
   grid-area: title;
 
-  padding: 1rem;
   font-size: 2rem;
 }
 #vintage {
@@ -117,18 +114,43 @@ button#subscribe-button {
 /* media */
 @media (max-width: 500px) {
   #header {
-    min-width: 320px;
+    border: 1px solid blue;
     height: auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     background: rgba(2, 0, 112, 0.3);
   }
+  #nav-bar a.nav-link {
+    font-size: 1.2rem;
+    padding: 0.1rem;
+    margin-right: 1rem;
+  }
+  #main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+  }
+  #form-group {
+    border: 1px solid red;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #news-description {
+    text-align: center;
+  }
 
+  #email-input {
+    width: 80vw;
+  }
   #header-img {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    width: 20rem;
+    width: 15rem;
     height: auto;
   }
 
@@ -141,12 +163,16 @@ button#subscribe-button {
   }
   #nav-bar a.nav-link {
     font-size: 1.2rem;
-    padding: 0 15px 0 15px;
-    margin: 5px;
     color: #eceff7;
     border: 1px solid white;
     font-weight: bold;
     background: #ea4949;
-    border-radius: 0 0 6px 0;
+  }
+  #form-group #email-input {
+    border-radius: 0.5rem;
+  }
+  #form-group #subscribe-button {
+    width: 70vw;
+    border-radius: 4px;
   }
 }
