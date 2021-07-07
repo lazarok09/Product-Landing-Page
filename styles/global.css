@@ -10,6 +10,10 @@
   box-shadow: none;
   border: none;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
 
 body {
   background: url("../assets/wallpaper.jpg") no-repeat;
