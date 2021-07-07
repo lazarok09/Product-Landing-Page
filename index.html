@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/global.css" type="text/css" />
     <link rel="stylesheet" href="./styles/index.css" type="text/css" />
     <title>Harmonica Delivery</title>
   </head>
@@ -15,20 +16,27 @@
         src="./assets/harmonica.svg"
       />
       <nav id="nav-bar">
-        <a class="nav-link" href="#form-group">News</a>
-        <a class="nav-link" href="#content">Content</a>
-        <a class="nav-link" href="#">Price</a>
+        <a class="nav-link" href="#form">News</a>
+        <a class="nav-link" href="#container-description">Content</a>
+        <a class="nav-link" href="#price">Price</a>
+        <a class="nav-link" href="#video">Video</a>
       </nav>
     </header>
     <main id="main">
       <!-- news letter area-->
       <div id="news-letter-container">
-        <form id="form-group">
-          <label for="email-input">
+        <form id="form">
+          <label for="email">
             <h1 id="news-description">Let's join in our newsletter</h1>
           </label>
-          <input type="email" id="email-input" placeholder="your email" />
-          <button type="submit" id="subscribe-button">Subscribe</button>
+          <input type="email" id="email" placeholder="your email" />
+          <button
+            type="submit"
+            id="submit"
+            href="https://www.freecodecamp.org/email-submit"
+          >
+            Subscribe
+          </button>
         </form>
       </div>
       <!-- end news letter area-->
@@ -40,7 +48,7 @@
           <div id="wood" class="content-image"></div>
         </section>
         <section id="container-description">
-          <h1>Legal Woods</h1>
+          <h1 class="content-title">Legal Woods</h1>
           <p>
             here are many variations of passages of Lorem Ipsum available, but
             the majority have suffered alteration in some form, by injected
@@ -56,12 +64,13 @@
         </section>
         <!-- wood finish-->
       </article>
+
       <article id="content-container">
         <section id="container-content">
           <div id="harmonica" class="content-image"></div>
         </section>
         <section id="container-description">
-          <h1>Good material</h1>
+          <h1 class="content-title">Good material</h1>
           <p>
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from 45 BC,
@@ -74,6 +83,52 @@
       </article>
 
       <!-- end the content area -->
+
+      <section id="video">
+        <iframe
+          src="https://www.youtube.com/embed/tZx0W_VsUNc"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section id="price">
+        <div class="harmonica-container">
+          <h1 class="title">Marine Band</h1>
+          <h2 class="price">$850</h2>
+          <ul class="description">
+            <li>Blues and Rock</li>
+            <li>Elvis Presley</li>
+            <li>Tom York</li>
+            <li>Something - Beatles</li>
+          </ul>
+        </div>
+        <div class="harmonica-container">
+          <h1 class="title">Super 20</h1>
+          <h2 class="price">$575</h2>
+          <ul class="description">
+            <li>Jazz</li>
+            <li>Blues</li>
+            <li>Bossa Nova</li>
+            <li>Roberto Carlos</li>
+          </ul>
+        </div>
+        <div class="harmonica-container">
+          <h1 class="title">Hot Metal</h1>
+          <h2 class="price">$350</h2>
+          <ul class="description">
+            <li>Alternative Indie</li>
+            <li>Rock in Roll</li>
+            <li>AC/DC, Alice in Chains</li>
+            <li>Linkin Park</li>
+          </ul>
+        </div>
+      </section>
     </main>
+    <footer id="footer">
+      <p>&copy A website for FreeCodeCamp exercises 2021</p>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,22 @@
+/* import the roboto font family */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  box-shadow: none;
+  border: none;
+}
+
+body {
+  background: url("../assets/wallpaper.jpg") no-repeat;
+  background-attachment: fixed;
+}
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}

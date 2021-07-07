@@ -1,27 +1,3 @@
-/* import the roboto font family */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  box-shadow: none;
-  border: none;
-}
-
-body {
-  background: url("../assets/wallpaper.jpg") no-repeat;
-  background-attachment: fixed;
-}
-#news-letter-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 #header {
   height: 5rem;
   min-width: 320px;
@@ -30,13 +6,22 @@ body {
   align-items: center;
   background: rgba(2, 0, 112, 0.3);
 }
-
+.content-title {
+  padding-left: 2rem;
+}
 #header-img {
   margin: 0;
   padding: 0;
   width: 30rem;
   height: 25rem;
 }
+#news-letter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* nav-bar and links */
 #nav-bar {
   display: flex;
@@ -50,13 +35,13 @@ body {
   border: 1px solid white;
   font-weight: bold;
   background: #ea4949;
-  padding: 0.3rem;
+  padding: 0.5rem;
   margin: 0 5px 0 5px;
 }
 
 /* form */
 
-#form-group {
+#form {
   display: flex;
   width: 50vw;
   align-items: center;
@@ -69,7 +54,7 @@ h1#news-description {
   margin-bottom: 1rem;
   text-align: center;
 }
-#email-input {
+#email {
   height: 2.5rem;
   font-size: 1.1rem;
   width: 40vw;
@@ -78,19 +63,44 @@ h1#news-description {
   margin-bottom: 1rem;
 }
 
-button#subscribe-button {
+button#submit {
   background: rgba(2, 0, 112, 0.9);
   color: white;
   width: 30%;
   height: 2rem;
   border-radius: 0.3rem;
+  margin-bottom: 1rem;
 }
-button#subscribe-button:hover {
+button#submit:hover {
   font-weight: bold;
   font-size: 0.9rem;
   background: rgba(16, 14, 163, 0.9);
 }
+#price {
+  display: flex;
+  width: 80vw;
+  margin: auto;
+  margin-top: 3rem;
+  justify-content: space-around;
+}
+.harmonica-container {
+  width: 25vw;
+  height: auto;
+  background: white;
+}
+
+.harmonica-container > h1 {
+  background: rgba(206, 206, 206, 0.5);
+}
+
+.harmonica-container > h2,
+.harmonica-container > h1,
+.harmonica-container > ul {
+  padding: 0.5rem;
+  text-align: center;
+}
 /* content area */
+
 #content-container {
   display: grid;
   grid-template-columns: 15vw 1fr 1fr;
@@ -104,22 +114,25 @@ button#subscribe-button:hover {
   grid-area: image;
 }
 #container-description {
-  border: 1px solid red;
+  background: white;
+  border: 1px solid black;
   grid-area: description;
 }
 #container-description > h1 {
   font-size: 2rem;
-  margin-left: 2rem;
+  margin: 0.8rem 0;
 }
+
 #container-description > p {
   text-align: justify;
   padding: 0 0.5rem;
+  margin: 5px;
 }
 #container-description > p::first-letter {
   margin-left: 1rem;
   text-transform: capitalize;
 }
-
+/* image area */
 .content-image {
   width: 15vw;
   height: 30vh;
@@ -132,10 +145,30 @@ button#subscribe-button:hover {
   background: url("../assets/silverhap.svg") no-repeat;
   background-size: cover;
 }
+#video {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+#video iframe {
+  width: 80vw;
+  height: 100vh;
+}
+#footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 4rem;
+  background: rgba(172, 169, 169, 0.8);
+}
+#footer > p {
+  padding: 1rem;
+}
 /* media */
 @media (max-width: 500px) {
   #header {
-    border: 1px solid blue;
     height: auto;
     display: flex;
     justify-content: center;
@@ -146,7 +179,6 @@ button#subscribe-button:hover {
     grid-area: description;
   }
   #container-description {
-    border: 1px solid red;
     grid-area: description;
   }
   .content-image {
@@ -161,21 +193,18 @@ button#subscribe-button:hover {
   }
   #nav-bar a.nav-link {
     font-size: 1.2rem;
-    padding: 0.1rem;
+    padding: 0.3rem;
     margin-right: 1rem;
   }
 
-  #form-group {
+  #form {
     width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  #news-description {
-    text-align: center;
-  }
 
-  #email-input {
+  #email {
     width: 80vw;
   }
   #header-img {
@@ -199,11 +228,57 @@ button#subscribe-button:hover {
     font-weight: bold;
     background: #ea4949;
   }
-  #form-group #email-input {
+  #form #email {
     border-radius: 0.5rem;
   }
-  #form-group #subscribe-button {
+  #form #submit {
     width: 70vw;
     border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+
+  #content-container {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 99vw;
+    margin: auto;
+  }
+  #container-description > h1 {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
+  #container-description > p {
+    font-size: 0.9rem;
+  }
+  #news-description {
+    text-align: center;
+  }
+  #container-description {
+    text-align: center;
+  }
+  .content-title {
+    padding-left: 0;
+  }
+
+  #video iframe {
+    width: 100vw;
+    height: 50vh;
+  }
+  #price {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
+  .harmonica-container {
+    margin: 1rem 0;
+    width: 100vw;
+  }
+  #footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
 }
