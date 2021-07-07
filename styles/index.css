@@ -15,6 +15,12 @@ body {
   background: url("../assets/wallpaper.jpg") no-repeat;
   background-attachment: fixed;
 }
+#news-letter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 #header {
   height: 5rem;
@@ -31,7 +37,6 @@ body {
   width: 30rem;
   height: 25rem;
 }
-
 /* nav-bar and links */
 #nav-bar {
   display: flex;
@@ -48,6 +53,9 @@ body {
   padding: 0.3rem;
   margin: 0 5px 0 5px;
 }
+
+/* form */
+
 #form-group {
   display: flex;
   width: 50vw;
@@ -58,58 +66,71 @@ body {
 }
 h1#news-description {
   color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+  text-align: center;
 }
+#email-input {
+  height: 2.5rem;
+  font-size: 1.1rem;
+  width: 40vw;
+  padding-left: 0.3rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 button#subscribe-button {
   background: rgba(2, 0, 112, 0.9);
   color: white;
   width: 30%;
-  height: auto;
-  border-radius: 1rem 0 1rem 1rem;
+  height: 2rem;
+  border-radius: 0.3rem;
 }
 button#subscribe-button:hover {
   font-weight: bold;
   font-size: 0.9rem;
   background: rgba(16, 14, 163, 0.9);
 }
-#email-input {
-  height: 2.5rem;
-  font-size: 1.1rem;
-  width: 80%;
-  border-radius: 0.5rem;
-}
-#content {
-  width: 50vw;
-  border: 1px solid red;
-  margin-top: 2rem;
-}
-.harmonica {
-  border: 1px solid blue;
-  background: rgba(2, 0, 112, 0.3);
+/* content area */
+#content-container {
   display: grid;
-  grid-gap: 2rem;
-  grid-template-areas: "image title" "image description";
+  grid-template-columns: 15vw 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-areas:
+    "image description description"
+    "image description description"
+    "image description description";
 }
-.harmonica > p {
-  grid-area: description;
-  color: white;
-  font-size: 1.2rem;
-}
-.harmonica > h1 {
-  grid-area: title;
-
-  font-size: 2rem;
-}
-#vintage {
-  color: #cebb86;
-}
-#super20 {
-  color: rgba(2, 0, 112, 1);
-}
-
-.image-content {
+#container-content {
   grid-area: image;
+}
+#container-description {
+  border: 1px solid red;
+  grid-area: description;
+}
+#container-description > h1 {
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+#container-description > p {
+  text-align: justify;
+  padding: 0 0.5rem;
+}
+#container-description > p::first-letter {
+  margin-left: 1rem;
+  text-transform: capitalize;
+}
+
+.content-image {
+  width: 15vw;
   height: 30vh;
-  width: 20vw;
+}
+#wood {
+  background: url("../assets/wood.svg") no-repeat;
+  background-size: cover;
+}
+#harmonica {
+  background: url("../assets/silverhap.svg") no-repeat;
+  background-size: cover;
 }
 /* media */
 @media (max-width: 500px) {
@@ -121,20 +142,30 @@ button#subscribe-button:hover {
     flex-wrap: wrap;
     background: rgba(2, 0, 112, 0.3);
   }
+  #container-content {
+    grid-area: description;
+  }
+  #container-description {
+    border: 1px solid red;
+    grid-area: description;
+  }
+  .content-image {
+    width: 0;
+    height: 0;
+  }
+  #wood {
+    background: url("");
+  }
+  #harmonica {
+    background: url("");
+  }
   #nav-bar a.nav-link {
     font-size: 1.2rem;
     padding: 0.1rem;
     margin-right: 1rem;
   }
-  #main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid black;
-  }
+
   #form-group {
-    border: 1px solid red;
     width: 80vw;
     display: flex;
     justify-content: center;
